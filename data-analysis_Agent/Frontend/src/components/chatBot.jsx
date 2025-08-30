@@ -612,7 +612,7 @@ return (
           
           <div className="flex gap-1 sm:gap-2 flex-shrink-0">
             {/* Settings button */}
-           {(apiKey && <button
+           {(!apiKey && <button
               onClick={() => setShowApiKeyInput(!showApiKeyInput)}
               className="p-1.5 sm:p-2 rounded-full transition-all duration-200 hover:bg-white/10 group"
               title="Configure OpenAI API Key"
@@ -790,7 +790,7 @@ return (
         </div>
 
         {/* Footer Info - Responsive */}
-        {apiKey && currentDataset && (
+        {!apiKey && currentDataset && (
           <div className="px-3 sm:px-4 py-2 bg-yellow-900/10 border-t border-yellow-600/20">
             <p className="text-yellow-400 text-xs flex items-center gap-2">
               <span>💡</span>
